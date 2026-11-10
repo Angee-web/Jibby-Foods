@@ -67,7 +67,13 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-[background-color,box-shadow] duration-300 ${
-        scrolled || open ? "bg-cream/95 shadow-[0_1px_0_var(--color-line)] backdrop-blur-sm" : "bg-cream"
+        // No backdrop-blur while the menu is open: backdrop-filter makes the header the
+        // containing block for the fixed menu panel inside it, collapsing the panel to 0px.
+        open
+          ? "bg-cream shadow-[0_1px_0_var(--color-line)]"
+          : scrolled
+            ? "bg-cream/95 shadow-[0_1px_0_var(--color-line)] backdrop-blur-sm"
+            : "bg-cream"
       }`}
     >
       <a
