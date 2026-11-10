@@ -1,0 +1,37 @@
+import {
+  Activity,
+  Atom,
+  Bean,
+  Bone,
+  Citrus,
+  Droplet,
+  Droplets,
+  Flame,
+  Gem,
+  Leaf,
+  Sparkles,
+  Sprout,
+  Sun,
+  Wheat,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+import type { NutrientIcon } from "@/content/nutrition";
+
+export const nutrientIcons: Record<NutrientIcon, LucideIcon> = {
+  zap: Zap,
+  wheat: Wheat,
+  sprout: Sprout,
+  bean: Bean,
+  activity: Activity,
+  atom: Atom,
+  bone: Bone,
+  droplet: Droplet,
+  gem: Gem,
+  flame: Flame,
+  citrus: Citrus,
+  droplets: Droplets,
+  sparkles: Sparkles,
+  leaf: Leaf,
+  sun: Sun,
+};
